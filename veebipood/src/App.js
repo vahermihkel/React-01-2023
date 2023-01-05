@@ -5,6 +5,16 @@ import Avaleht from './pages/Avaleht';
 import LisaToode from './pages/LisaToode';
 import Ostukorv from './pages/Ostukorv';
 
+// 2te tüüpi vead:
+// 1. compile errors - kompileerimise errorid
+// mis juhtuvad kui kood pakitakse kokku ja saadetakse brauserisse
+// need vead on cmd-s ja lehel tumehalli tausta peal kirjas
+
+// 2. runtime errors - käimasolemise errorid
+// juhtuvad HTML-s või ketrab igavesti
+// leht läheb valgeks ja midagi pole näha
+// kirjas brauseris parem klõps -> inspect -> console
+
 function App() {
   return (
     <div className="App">
