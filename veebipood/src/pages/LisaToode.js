@@ -38,6 +38,27 @@ function LisaToode() {
       muudaSonum("Ei saa tühja nimega toodet lisada!");
     } else {
       muudaSonum("Toode lisatud: " + inputiLuger.current.value);
+      let tootedLS = localStorage.getItem("tooted");
+      tootedLS = JSON.parse(tootedLS) || [];
+      tootedLS.push(inputiLuger.current.value);
+      tootedLS = JSON.stringify(tootedLS);
+      localStorage.setItem("tooted", tootedLS);
+
+      // const tootedLS2 = JSON.parse(localStorage.getItem("tooted")) || [];
+      // tootedLS2.push(inputiLuger.current.value);
+      // localStorage.setItem("tooted", JSON.stringify(tootedLS2));
+
+      // 1. võtame localStorage-st vanad tooted   "["Coca-cola", "Fanta", "Sprite"]"
+      // 2. võtame jutumärgid väärtuselt ära   ["Coca-cola", "Fanta", "Sprite"]
+      // 3. lisame ühe juurde    .push(inputiLuger.current.value);   Vichy
+      // 4. paneme jutumärgid väärtusele tagasi   ["Coca-cola", "Fanta", "Sprite", "Vichy"]
+      // 5. paneme localStorage-sse uuenenud väärtused   "["Coca-cola", "Fanta", "Sprite", "Vichy"]"
+
+      // 1. localStorage.getItem("VÕTI");
+      // 2. JSON.parse();
+      // 3. [].push(UUS_VÄÄRTUS_MIS_JUURDE);
+      // 4. JSON.stringify();
+      // 5. localStorage.setItem("VÕTI", "[sada,asdas,d,sada,sd,asd]");
     }
   }
 

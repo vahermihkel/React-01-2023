@@ -49,11 +49,11 @@ function Seaded() {
   return (
     <div>
       <label>Email</label>
-      <input ref={emailLuger} type="text" />
+      <input ref={emailLuger} defaultValue={localStorage.getItem("email")} type="text" />
       <button onClick={salvestaEmail}>Sisesta</button>
       <br />
       <label>Telefoninumber</label>
-      <input ref={telefonLuger} type="text" />
+      <input ref={telefonLuger} defaultValue={localStorage.getItem("telefon")} type="text" />
       <button onClick={salvestaTelefon}>Sisesta</button>
       <br />
       <button onClick={() => muudaKeel("ee")}>Eesti</button>

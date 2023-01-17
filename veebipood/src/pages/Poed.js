@@ -1,4 +1,5 @@
-import { useRef, useState } from "react"
+import { useRef, useState } from "react";
+import poedFailist from "../poedFailist.json";
 
 function Poed() {
 
@@ -8,11 +9,11 @@ function Poed() {
 
 // pean panema array'sse kui tahan sorteerida, filtreerida
 // kui nad tulevad andmebaasist ehk klient tahab ise hallata
-  const [poed, muudaPoed] = useState(["Ülemiste", "Viimsi", "Rocca al Mare", "Magistral", "Vesse", "Kristiine", "Järveotsa"]);
+  const [poed, muudaPoed] = useState(poedFailist);
   const poodRef = useRef();
 
   const tagasiOriginaali = () => {
-    muudaPoed(["Ülemiste", "Viimsi", "Rocca al Mare", "Magistral", "Vesse", "Kristiine", "Järveotsa"]);
+    muudaPoed(poedFailist);
   }
 
   const sorteeriAZ = () => {

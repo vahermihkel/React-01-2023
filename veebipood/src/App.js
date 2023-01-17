@@ -24,7 +24,7 @@ import YksikToode from './pages/YksikToode';
 function App() {
   return (
     <div className="App">
-      <Link to="/avaleht">
+      <Link to="/">
         <img className="pilt" src="https://estonia.ee/wp-content/uploads/nobe_netist_4.jpg" alt="" />
       </Link>
       <Link to="/ostukorv">
@@ -50,16 +50,16 @@ function App() {
       </Link>
 
       <Routes>
-        <Route path="avaleht" element={ <Avaleht /> } />
+        <Route path="" element={ <Avaleht /> } />
         <Route path="ostukorv" element={ <Ostukorv /> } />
         <Route path="lisa-toode" element={ <LisaToode /> } />
         <Route path="meist" element={ <Meist /> } />
         <Route path="seaded" element={ <Seaded /> } />
         <Route path="halda-tooteid" element={ <HaldaTooteid /> } />
-        <Route path="muuda-toode" element={ <MuudaToode /> } />
+        <Route path="muuda-toode/:jrkNr" element={ <MuudaToode /> } />
         <Route path="poed" element={ <Poed /> } />
         <Route path="tooted" element={ <Tooted /> } />
-        <Route path="vaata-toodet" element={ <YksikToode /> } />
+        <Route path="vaata-toodet/:index" element={ <YksikToode /> } />
       </Routes>
 
 
@@ -68,3 +68,9 @@ function App() {
 }
 
 export default App;
+
+// 17.01 Array'd LocalStorage'sse, ostukorvis kuvamine, lisamine, kustutamine, URL parameeter
+// 19.01 Objektid, sorteerimine, filtreerimine, ostukorvi kogusumma, hind, pilt, dünaamiline CSS
+// 20.01  11.00-14.15 Uue inglise keelse projekti: Bootstrap (kujundus), i18next (tõlge), react-toastify
+// 24.01
+// 31.01
