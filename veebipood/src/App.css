@@ -16,3 +16,13 @@
   font-weight: bold;
   cursor: pointer;
 }
+
+.aktiivne {
+  border: 1px solid green;
+  background-color: rgb(231, 238, 231);
+}
+
+.mitteaktiivne {
+  border: 1px solid red;
+  background-color: rgb(243, 236, 236);
+}

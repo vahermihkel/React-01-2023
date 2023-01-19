@@ -9,6 +9,7 @@ import Seaded from './pages/Seaded';
 import HaldaTooteid from './pages/HaldaTooteid';
 import MuudaToode from './pages/MuudaToode';
 import Poed from './pages/Poed';
+import Poed2 from './pages/Poed2';
 import Tooted from './pages/Tooted';
 import YksikToode from './pages/YksikToode';
 
@@ -45,6 +46,9 @@ function App() {
       <Link to="/poed">
         <button className="nupp">Poed</button>
       </Link>
+      <Link to="/poed2">
+        <button className="nupp">Poed2</button>
+      </Link>
       <Link to="/tooted">
         <button className="nupp">Tooted</button>
       </Link>
@@ -58,6 +62,7 @@ function App() {
         <Route path="halda-tooteid" element={ <HaldaTooteid /> } />
         <Route path="muuda-toode/:jrkNr" element={ <MuudaToode /> } />
         <Route path="poed" element={ <Poed /> } />
+        <Route path="poed2" element={ <Poed2 /> } />
         <Route path="tooted" element={ <Tooted /> } />
         <Route path="vaata-toodet/:index" element={ <YksikToode /> } />
       </Routes>

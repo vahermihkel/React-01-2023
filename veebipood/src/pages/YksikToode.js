@@ -9,7 +9,13 @@ function YksikToode() {
   return (
     <div>
       {leitudToode === undefined && <div>Toodet ei leitud</div>}
-      {leitudToode !== undefined && <div>{leitudToode}</div>}
+      {leitudToode !== undefined && 
+        <div>
+          <img src={leitudToode.pilt} alt="" />
+          <div>{leitudToode.pilt}</div>
+          <div>{leitudToode.nimi}</div>
+          <div>{leitudToode.hind}</div>  
+        </div>}
     </div>
   )
 }

@@ -16,8 +16,11 @@ function HaldaTooteid() {
   return (
     <div>
       {tooted.map((element, index) => 
-        <div key={element}>
-            {element} 
+        <div key={index} className={element.aktiivne === true ? "aktiivne" : "mitteaktiivne"}>
+          <img src={element.pilt} alt="" />
+          <div>{element.pilt}</div>
+          <div>{element.nimi}</div>
+          <div>{element.hind}</div>
           <button onClick={() => kustuta(index)}>Kustuta</button> 
           <Link to={"/muuda-toode/" + index}>
             <button>Muuda</button>
